@@ -254,6 +254,36 @@ header .nav ul li a {
   background-size: cover;
 }
 
+.slider .swiper-slide h2 {
+  position: relative;
+  display: inline-block;
+  line-height: 70px;
+  font-size: 62px;
+  color: white;
+  margin-top: 200px;
+}
+
+.slider .swiper-slide h2:after {
+  position: absolute;
+  left: 0;
+  bottom: -35px;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.slider .swiper-slide h2 em {
+  display: block;
+  font-size: 59px;
+  font-weight: 100;
+}
+
+.slider .swiper-slide p {
+  font-size: 27px;
+  color: white;
+  padding-top: 55px;
+}
 
 /* 미디어 쿼리 */
 @media (max-width: 1290px) {
@@ -276,6 +306,11 @@ header .nav ul li a {
 
   header h1 strong {
     top: 19px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
   }
 }
 
@@ -300,9 +335,37 @@ header .nav ul li a {
   header h1 strong {
     left: 24px;
   }
+
+  .banner_menu .bm_left ul,
+  .banner_menu .bm_right ul:first-child {
+    display: none;
+  }
 }
 
-@media (max-width: 960px) {}
+@media (max-width: 960px) {
+  .slider {
+    height: 500px;
+  }
+
+  .slider .swiper-slide h2 {
+    margin-top: 170px;
+    font-size: 37px;
+    line-height: 45px;
+  }
+
+  .slider .swiper-slide h2:after {
+    bottom: -15px;
+  }
+
+  .slider .swiper-slide h2 em {
+    font-size: 34px;
+  }
+
+  .slider .swiper-slide p {
+    font-size: 16px;
+    padding-top: 35px;
+  }
+}
 
 @media (max-width: 768px) {
   .row {
@@ -319,6 +382,56 @@ header .nav ul li a {
 
   .header h1 strong {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider {
+    height: 400px;
+  }
+
+  .slider .swiper-slide h2 {
+    margin-top: 140px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .slider .swiper-slide h2:after {
+    bottom: -5px;
+  }
+
+  .slider .swiper-slide h2 em {
+    font-size: 20px;
+  }
+
+  .slider .swiper-slide p {
+    font-size: 14px;
+    padding-top: 25px;
+  }
+
+  .banner_menu {
+    top: 16px;
+  }
+
+  .banner_menu .bm_right li.white a {
+    font-size: 14px;
+    padding: 3px 5px 5px 5px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    border-color: #fff;
+  }
+
+  .banner_menu .bm_right li.purple a {
+    font-size: 14px;
+    padding: 3px 5px 5px 5px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    border-color: #fff;
+  }
+
+  .swiper-pagination-bullet {
+    width: 13px !important;
+    height: 13px !important;
   }
 }
 
